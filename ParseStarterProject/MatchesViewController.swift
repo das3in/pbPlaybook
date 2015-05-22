@@ -15,11 +15,16 @@ class MatchesViewController: UITableViewController {
     var team: PFObject? = nil
     var teams: [PFObject] = []
     var matches: [PFObject] = []
+    var match: PFObject? = nil
     
     var refresher: UIRefreshControl!
     
     
     @IBAction func saveMatchDetail(segue: UIStoryboardSegue) {
+        
+    }
+    
+    @IBAction func dismissMatchData(segue: UIStoryboardSegue) {
         
     }
 
@@ -53,6 +58,7 @@ class MatchesViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell: UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
         let match: PFObject = matches[indexPath.row]
+        self.match = match
         var matchNumberString = match["matchNumber"] as? String
         var matchTeams = match["teams"] as! [String]
         var opponent = matchTeams[1]
@@ -76,6 +82,9 @@ class MatchesViewController: UITableViewController {
             var points = segue.destinationViewController as! PointsViewController
             points.match = sender as? PFObject
             points.tournament = sender as? PFObject
+        } else if segue.identifier == "jumptoMatchData" {
+            var matchData = segue.destinationViewController as! MatchDataViewController
+            matchData.match = match
         }
     }
     
@@ -109,6 +118,8 @@ class MatchesViewController: UITableViewController {
             self.refresher.endRefreshing()
         }
     }
+    
+    
     
     func refresh() {
         queryMatches()
