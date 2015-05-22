@@ -28,7 +28,8 @@ Put up some cool pictures and stuff of app usage
 ## App - ToDo's
 
 1. Re-enable double-click for bunkerDetail functionality
-2. Re-write Parse queries so I'm not querying at every segue
-3. Facebook integration
-4. Divisional teams (gotta find/create some sort of tournament registration api)
-5. Make it pretty
+2. Make data slides
+3. Re-write Parse queries so I'm not querying at every segue
+4. Facebook integration
+5. Divisional teams (gotta find/create some sort of tournament registration api)
+6. Make it pretty
