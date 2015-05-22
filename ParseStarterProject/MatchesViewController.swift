@@ -37,7 +37,8 @@ class MatchesViewController: UITableViewController {
     
     override func viewDidAppear(animated: Bool) {
         var addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addButtonMethod")
-        self.navigationItem.rightBarButtonItem = addButton
+        var dataButton = UIBarButtonItem(title: "Match Data", style: UIBarButtonItemStyle.Plain, target: self, action: "dataButtonMethod")
+        self.navigationItem.setRightBarButtonItems([addButton, dataButton], animated: true)
     }
     
     
@@ -81,6 +82,10 @@ class MatchesViewController: UITableViewController {
     
     func addButtonMethod() {
         self.performSegueWithIdentifier("jumpToNewMatch", sender: self)
+    }
+    
+    func dataButtonMethod() {
+        self.performSegueWithIdentifier("jumptoMatchData", sender: self)
     }
     
     func queryMatches() {

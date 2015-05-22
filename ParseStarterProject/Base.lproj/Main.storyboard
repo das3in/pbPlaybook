@@ -231,6 +231,7 @@
                     <connections>
                         <segue destination="CeJ-Ms-SUf" kind="presentation" identifier="jumpToNewMatch" id="WXj-oH-xMT"/>
                         <segue destination="psV-v1-0r3" kind="show" identifier="jumpToPointsList" id="eH8-2T-fEb"/>
+                        <segue destination="xd3-T5-feC" kind="presentation" identifier="jumptoMatchData" id="WDY-8a-Uu0"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vou-Iq-fPU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -741,6 +742,26 @@
                 <exit id="wVq-Hl-ryy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3614" y="1464"/>
+        </scene>
+        <!--Match Data View Controller-->
+        <scene sceneID="vQM-Q5-frH">
+            <objects>
+                <viewController id="xd3-T5-feC" customClass="MatchDataViewController" customModule="ParseStarterProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xaC-na-6bA"/>
+                        <viewControllerLayoutGuide type="bottom" id="vRH-q3-Ne1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dya-zU-MH6">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uEl-YN-Uyk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3614" y="2336"/>
         </scene>
         <!--mainNavController-->
         <scene sceneID="n9t-sS-VrG">
