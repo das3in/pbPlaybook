@@ -231,7 +231,6 @@
                     <connections>
                         <segue destination="CeJ-Ms-SUf" kind="presentation" identifier="jumpToNewMatch" id="WXj-oH-xMT"/>
                         <segue destination="psV-v1-0r3" kind="show" identifier="jumpToPointsList" id="eH8-2T-fEb"/>
-                        <segue destination="xd3-T5-feC" kind="presentation" identifier="jumptoMatchData" id="WDY-8a-Uu0"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vou-Iq-fPU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -263,6 +262,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <segue destination="EV8-fL-nER" kind="presentation" identifier="jumpToNewBitburgPoint" id="Taq-zg-IcB"/>
+                        <segue destination="xd3-T5-feC" kind="presentation" identifier="jumptoMatchData" id="23V-pM-44T"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uks-pf-rW0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -761,12 +761,12 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="yI5-xi-kAy" kind="unwind" unwindAction="dismissMatchData:" id="teZ-5O-eyh"/>
+                                    <segue destination="yI5-xi-kAy" kind="unwind" unwindAction="dismissMatchData:" id="HCB-6a-jw5"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2J8-je-2Ac" customClass="BarChartView" customModule="Charts">
                                 <rect key="frame" x="154" y="93" width="750" height="568"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.81314247529999995" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -780,7 +780,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEl-YN-Uyk" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="yI5-xi-kAy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3614" y="2336"/>
+            <point key="canvasLocation" x="4792" y="2344"/>
         </scene>
         <!--mainNavController-->
         <scene sceneID="n9t-sS-VrG">

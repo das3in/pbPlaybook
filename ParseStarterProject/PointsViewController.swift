@@ -19,6 +19,10 @@ class PointsViewController: UITableViewController {
         
     }
     
+    @IBAction func dismissMatchData(segue: UIStoryboardSegue) {
+        
+    }
+    
     var refresher: UIRefreshControl!
 
     override func viewDidLoad() {
@@ -35,7 +39,8 @@ class PointsViewController: UITableViewController {
     
     override func viewDidAppear(animated: Bool) {
         var addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addButtonMethod")
-        self.navigationItem.rightBarButtonItem = addButton
+        var dataButton = UIBarButtonItem(title: "Match Data", style: UIBarButtonItemStyle.Plain, target: self, action: "dataButtonMethod")
+        self.navigationItem.setRightBarButtonItems([addButton, dataButton], animated: true)
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -59,11 +64,19 @@ class PointsViewController: UITableViewController {
         if segue.identifier == "jumpToNewBitburgPoint" {
             var newPoint = segue.destinationViewController as! NewBitburgPointViewController
             newPoint.match = match
+        } else if segue.identifier == "jumptoMatchData" {
+            var matchData = segue.destinationViewController as! MatchDataViewController
+            matchData.match = match
+            matchData.points = points
         }
     }
     
     func addButtonMethod() {
         self.performSegueWithIdentifier("jumpToNewBitburgPoint", sender: self)
+    }
+    
+    func dataButtonMethod() {
+        self.performSegueWithIdentifier("jumptoMatchData", sender: self)
     }
     
     

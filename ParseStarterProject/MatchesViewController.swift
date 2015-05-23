@@ -24,9 +24,7 @@ class MatchesViewController: UITableViewController {
         
     }
     
-    @IBAction func dismissMatchData(segue: UIStoryboardSegue) {
-        
-    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,8 +40,7 @@ class MatchesViewController: UITableViewController {
     
     override func viewDidAppear(animated: Bool) {
         var addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addButtonMethod")
-        var dataButton = UIBarButtonItem(title: "Match Data", style: UIBarButtonItemStyle.Plain, target: self, action: "dataButtonMethod")
-        self.navigationItem.setRightBarButtonItems([addButton, dataButton], animated: true)
+        self.navigationItem.setRightBarButtonItem(addButton, animated: true)
     }
     
     
@@ -82,10 +79,7 @@ class MatchesViewController: UITableViewController {
             var points = segue.destinationViewController as! PointsViewController
             points.match = sender as? PFObject
             points.tournament = sender as? PFObject
-        } else if segue.identifier == "jumptoMatchData" {
-            var matchData = segue.destinationViewController as! MatchDataViewController
-            matchData.match = match
-        }
+        } 
     }
     
     
@@ -93,9 +87,7 @@ class MatchesViewController: UITableViewController {
         self.performSegueWithIdentifier("jumpToNewMatch", sender: self)
     }
     
-    func dataButtonMethod() {
-        self.performSegueWithIdentifier("jumptoMatchData", sender: self)
-    }
+    
     
     func queryMatches() {
         var query = PFQuery(className: "Match")
